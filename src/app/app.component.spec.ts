@@ -14,22 +14,49 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it('should create the app', () => {
+ 
+
+  it('Verificar multiplos', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    expect(app.fizBuzz(3)).toEqual('Fizz');
   });
 
-  it(`should have as title 'practice-angular'`, () => {
+  it('Verificar multiplos', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('practice-angular');
+    expect(app.fizBuzz(1)).toEqual('Fizz');
   });
 
-  it('should render title', () => {
+  it('Verificar multiplos', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('practice-angular app is running!');
+    const app = fixture.componentInstance;
+    expect(app.fizBuzz(-10)).toEqual('Fizz');
   });
+
+  it('Verificar multiplos', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.fizBuzz(5)).toEqual('Buzz');
+  });
+
+  it('Verificar multiplos', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.fizBuzz(13)).toEqual('Fizz');
+  });
+
+  it('Verificar multiplos', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.fizBuzz(15)).toEqual('FizzBuzz');
+  });
+
+  it('Verificar multiplos', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.fizBuzz(999)).toEqual('Fizz');
+  });
+
 });
+
