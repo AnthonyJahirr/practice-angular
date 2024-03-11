@@ -7,5 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 
 export class BarraLateralComponent {
-  @Input() item1: string | undefined; // decorate the property with @Input()
+  @Input() messageblue1: string = ''; // decorate the property with @Input()
+  @Input() messageblue2: string = '';
+  @Input() messageblack1: string = '';
+  @Input() messageblack2: string = '';
 }

@@ -1,0 +1,11 @@
+.main-container {
+    width: 99.2%;
+    height: 100vh;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    gap:10px;
+    height: 100%;
+}

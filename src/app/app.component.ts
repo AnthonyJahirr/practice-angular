@@ -9,24 +9,33 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'practice-angular';
 
-  fizBuzz(input: number){
-    if(input>=0 && input <=100){//validar que sea mayor que 0 y menor que 100
-      //validar si es multiplo de 3 para fizz
-      if((input%3)==0){
-        return 'Fizz'
+ 
+
+  fibonacci(valorlimite : number, valorfibo : number = 0, valorviejo : number = 0){
+    
+    if(valorfibo<=valorlimite){
+      console.log('Culminado')
+      return true
+    }else{
+      if(valorfibo<=1){
+        valorviejo=valorfibo;
+        valorfibo = valorfibo+1;
+        console.log("Valor: ",valorfibo)
+        this.fibonacci(valorlimite, valorfibo, valorviejo);
       }
-      //validar si es multiplo de 5 para buzz
-      if((input%5)==0){
-        return 'Buzz'
-      } 
-      //validar si es multiplo de 3 y 5 para fizzbuzz
-      if((input%3 &&  input%5)==0){
-        return 'FizzBuzz'
-      } 
+      if(valorfibo>1){
+        valorfibo=valorviejo+valorfibo;
+        console.log("Valor: ",valorfibo)
+        this.fibonacci(valorlimite, valorfibo, valorviejo);
+      }
+      return false
     }
-    return 'Número invalido'
+
     
-    
+
+
+
+
   }
 
 }

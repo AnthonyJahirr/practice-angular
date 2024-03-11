@@ -15,47 +15,10 @@ describe('AppComponent', () => {
   });
 
  
-
-  it('Verificar multiplos', () => {
+  it('Verificar fibonacci', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.fizBuzz(3)).toEqual('Fizz');
-  });
-
-  it('Verificar multiplos', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.fizBuzz(1)).toEqual('Fizz');
-  });
-
-  it('Verificar multiplos', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.fizBuzz(-10)).toEqual('Fizz');
-  });
-
-  it('Verificar multiplos', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.fizBuzz(5)).toEqual('Buzz');
-  });
-
-  it('Verificar multiplos', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.fizBuzz(13)).toEqual('Fizz');
-  });
-
-  it('Verificar multiplos', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.fizBuzz(15)).toEqual('FizzBuzz');
-  });
-
-  it('Verificar multiplos', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.fizBuzz(999)).toEqual('Fizz');
+    expect(app.fibonacci(10, 0)).toEqual(true);
   });
 
 });
